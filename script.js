@@ -61,7 +61,7 @@ fetchedTodos = JSON.parse(fetchedTodos);
 
 
 // logic to check if number of todos is 0, if it is then display as "no tasks" else show all the other tasks!
-if (fetchedTodos.length === 0){
+if (fetchedTodos === null || fetchedTodos.length === 0){
     taskList.innerHTML = "<p>Hurray! You have no tasks :)</p>";
 } else {
 let newList = fetchedTodos.map((value) => {
