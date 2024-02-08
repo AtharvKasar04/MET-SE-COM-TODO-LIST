@@ -1,0 +1,287 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+    scroll-behavior: smooth;
+    /* background-color: #1e71ff; */
+    border-radius: inherit;
+    /* margin-inline-end: 10%; */
+}
+
+::-webkit-scrollbar-track{
+    background-color: white;
+    border-radius: inherit;
+    margin-block: 20px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: #e6ccfd;
+    border-radius: inherit;
+    border: 3px solid #e2e2e2;
+}
+
+body{
+    font-family: Montserrat Alternates, Arial, Helvetica, sans-serif;
+}
+
+.container{
+    height: 100vh;
+}
+
+.imgContainer{
+    width: 95%;
+    /* border: 2px solid red; */
+    border-radius: 18px;
+    overflow: hidden;
+    margin: 20px auto;
+    height: 50%;
+    background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0, 255, 153, 0.5)),url(./images/bg_image.jpg);
+    background-size: cover;
+}
+.imgContainer img{
+    width: 100%;
+    /* height: 30%; */
+}
+
+/* Main Card */
+
+.mainCard{
+    width: 60%;
+    /* padding: 10px; */
+    /* box-shadow: 2px 2px 14px black; */
+    /* transform: translate(0, -150%); */
+    /* background-color: white; */
+    border-radius: 22px;
+    margin: 0 auto;
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    /* border: 2px solid red; */
+}
+
+.upper{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.upper button{
+    background-color: #367bf5;
+    padding: 6px 14px;
+    outline: none;
+    border: 0;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    box-shadow: 1px 1px 5px black;
+    transition: 0.2s;
+    font-family: Montserrat alternates;
+}
+
+.upper button:hover{
+    background-color: #0a64ff;
+    cursor: pointer;
+}
+.upper h3{
+    color: white;
+    font-size: 2.8rem;
+    letter-spacing: 4px;
+    text-shadow: 0px 0px 6px black;
+}
+
+.taskList{
+    background-color: white;
+    border-radius: 28px;
+    padding: 20px;
+    box-shadow: 2px 2px 8px black;
+    height: fit-content;
+    /* overflow-y: scroll; */
+    /* height: 500px; */
+    box-shadow: 0px 0px 10px black;
+    max-height: 400px;
+    overflow-y: scroll;
+}
+
+.task{
+    border-bottom: 1px solid rgb(209, 209, 209);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 20px;
+    transition: 0.1s;
+}
+
+.task:hover{
+    background-color: rgb(227, 227, 227);
+    border-radius: 16px;
+    border: none;
+}
+
+.taskDetails h4{
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+
+.taskDetails p{
+    font-size: 14px;
+    margin: 2px 0;
+}
+
+.deleteButton{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 12px;
+    color: red;
+    padding: 0px 10px;
+    transition: 0.2s;
+}
+
+.deleteButton img{
+    transition: 0.1s;
+    width: 30px;
+    border-radius: 50%;
+    border: 1px solid gray;
+}
+.deleteButton img:hover{
+    transform: scale(1.05);
+    box-shadow: 0px 0px 4px black;
+}
+/* #deleteButton:hover{
+    text-decoration: underline;
+    letter-spacing: 1px;
+} */
+
+.priorityMark{
+    /* background: #367BF5; */
+    font-size: 18px;
+    margin: 0 20px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    /* position: absolute; */
+    /* top: 50%; */
+    font-weight: bold;
+    color: white;
+    letter-spacing: 2px;
+}
+
+/* Popup Card */
+
+.popupTODO{
+    background: white;
+    /* border: 2px solid red; */
+    width: fit-content;
+    padding: 20px 50px;
+    border-radius: 18px;
+    position: absolute;
+    top: 80%;
+    left: 42%;
+    /* transform: translate(0%, -120%) scale(0.01); */
+    visibility: hidden;
+    transition: 0.3s;
+    box-shadow: 0px 0px 15px black;
+}
+
+.todoName{
+    margin: 6px 0;
+}
+.todoDescription{
+    margin: 6px 0;
+}
+.todoPriority{
+    margin: 6px 0; 
+}
+
+#todoName{
+    padding: 10px 20px;
+    background-color: #e6ccfd;
+    border-radius: 20px;
+    outline: none;
+    border: 2px solid #bf76ff;
+}
+#todoDescription{
+    padding: 10px 20px;
+    border: 2px solid #bf76ff;
+    background-color: #e6ccfd;
+    border-radius: 20px;
+    resize: none;
+}
+#todoPriority{
+    border: 2px solid #bf76ff;
+    padding: 10px 20px;
+    background-color: #e6ccfd;
+    outline: none;
+    border-radius: 20px;
+}
+
+#saveBtn{
+    background-color: #367bf5;
+    border: none;
+    outline: none;
+    padding: 4px 8px;
+    border-radius: 14px;
+    color: white;
+    font-weight: bold;
+    /* margin: 0px auto; */
+    transition: 0.2s;
+}
+
+#saveBtn:hover{
+    background-color: #0e66ff;
+    cursor: pointer;
+}
+
+.saveBtn{
+    display: flex;
+    justify-content: center;
+    margin-top: 18px;
+}
+
+.inpFieldNames{
+    color: gray;
+    font-size: 0.8rem;
+    padding: 8px;
+}
+
+/* Button clicked css */
+
+.showPopup{
+    visibility: visible;
+    transform: scale(1);
+    transform: translate(0%, -120%);
+    transition: 0.3s;
+}
+
+.closePopup{
+    visibility: hidden;
+    transform: scale(0.01);
+    transform: translate(0%, -120%);
+    transition: 0.3s;
+}
+
+.taskList > P{
+    text-align: center;
+    font-weight: 500;
+}
+
+#cancelBtn{
+    padding: 6px 12px;
+    border-radius: 12px;
+    background-color: #ea3d2f;
+    color: white;
+    outline: none;
+    border: none;
+    font-weight: bold;
+    margin: 0 8px;
+    transition: 0.2s;
+}
+
+#cancelBtn:hover{
+    background-color: #fd1909;
+    cursor: pointer;
+}

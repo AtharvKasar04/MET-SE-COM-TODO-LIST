@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Added the Favicon (list icon) -->
+    <link rel="shortcut icon" href="./images/favicon_list_icon.png" type="image/x-icon">
+    
+    <title>Final Project test</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="imgContainer">
+            
+        </div>
+
+        <div class="mainCard">
+
+            <section class="upper">
+                <button id="addTodoButton">Add Todo</button>   
+                <h3>TODO</h3>
+            </section>
+
+            <section class="taskList">
+               
+            </section>
+
+        </div>
+
+
+        <div class="popupTODO closePopup">
+            <div class="todoName">
+                <p class="inpFieldNames">TODO name</p>
+                <input type="text" name="" id="todoName" required>
+            </div>
+
+            <div class="todoDescription">
+                <p class="inpFieldNames">Description</p>
+                <textarea name="" id="todoDescription" cols="20" rows="4" required></textarea>
+            </div>
+
+            <div class="todoPriority">
+                <p class="inpFieldNames">Priority</p>
+
+                <select name="priority" id="todoPriority">
+                    <option value="high">High</option>
+                    <option value="medium">Medium</option>
+                    <option value="low">Low</option>
+                </select>
+            </div>
+
+            <div class="saveBtn">
+                <button id="saveBtn">Save</button>
+                <button id="cancelBtn">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js"></script>
+</body>
+</html>
